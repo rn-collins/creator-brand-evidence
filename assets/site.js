@@ -48,8 +48,11 @@
         </div>
       </div>
       <div class="foot-bottom">
-        <span>&copy; <span id="yr"></span> Evidence&middot;Studio &mdash; RN Collins</span>
+        <span>&copy; <span id="yr"></span> Evidence&middot;Studio &mdash; Rayven-Nikkita Collins LLC</span>
         <span>Built on marketing science, consumer psychology, platform studies, and FTC guidance.</span>
+      </div>
+      <div class="foot-bottom">
+        <span>Built by <a href="https://aloha-ai-consulting.vercel.app" target="_blank" rel="noopener">Aloha AI</a>. Explore all AI tools and projects at <a href="https://rn-portfolio-khaki.vercel.app" target="_blank" rel="noopener">RN Builds</a>.</span>
       </div>
     </div>
   </footer>`;
