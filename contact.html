@@ -87,8 +87,8 @@
         <div class="field"><label>Approximate budget range</label><input name="Budget"></div>
         <div class="field"><label>Anything else I should know?</label><textarea name="Notes"></textarea></div>
 
-        <button class="btn big" type="submit">Submit Audit Inquiry</button>
-        <p class="hidden-badge" id="formnote">This opens a pre-filled email in your mail app. No data is stored by this page.</p>
+        <button class="btn big" type="submit" id="intake-submit">Submit Audit Inquiry</button>
+        <p class="hidden-badge" id="formnote">Sent directly — RN Collins reviews every inquiry personally.</p>
       </form>
 
       <aside>
@@ -101,8 +101,7 @@
             <li>We begin with intake + evidence synthesis.</li>
           </ol>
           <hr class="divider" style="margin:18px 0">
-          <p class="muted">Prefer to start smaller? Ask about a single-layer review or a scoping consult.</p>
-          <p><a class="btn ghost" href="mailto:collins.ra@husky.neu.edu?subject=Consult%20request%20%E2%80%94%20Evidence%C2%B7Studio">Email directly</a></p>
+          <p class="muted">Prefer to start smaller? Ask about a single-layer review or a scoping consult — use the form.</p>
         </div>
       </aside>
     </div>
@@ -121,9 +120,15 @@ function sendIntake(e){
     if(seen[k]){ seen[k]+=", "+v; } else { seen[k]=v; }
   });
   Object.keys(seen).forEach(function(k){ lines.push(k+": "+seen[k]); });
-  var body=encodeURIComponent(lines.join("\n"));
-  window.location.href="mailto:collins.ra@husky.neu.edu?subject="+encodeURIComponent("Creator + Brand Evidence Audit inquiry")+"&body="+body;
-  document.getElementById('formnote').textContent="Opening your email app… if nothing happens, email collins.ra@husky.neu.edu directly.";
+  var name=seen['Name']||'';
+  var email=seen['Email']||'';
+  var btn=document.getElementById('intake-submit');
+  var note=document.getElementById('formnote');
+  btn.disabled=true; btn.textContent='Sending…';
+  fetch('https://rn-api.vercel.app/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({name:name,email:email,message:lines.join("\n"),source:'creator-brand-evidence-intake'})})
+    .then(function(){ note.textContent='Sent — RN Collins reviews every inquiry personally and will follow up by email.'; btn.textContent='Sent ✓'; })
+    .catch(function(){ note.textContent='Something went wrong. Please try again in a moment.'; btn.disabled=false; btn.textContent='Submit Audit Inquiry'; });
   return false;
 }
 </script>
