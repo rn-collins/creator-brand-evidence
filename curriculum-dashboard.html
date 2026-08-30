@@ -4,6 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Capability Dashboard — 12-Week Curriculum — Evidence&middot;Studio</title>
+<link rel="canonical" href="https://creator-brand-evidence.vercel.app/curriculum-dashboard">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta property="og:title" content="Capability Dashboard — 12-Week Curriculum — Evidence·Studio">
+<meta property="og:description" content="An interactive Tier 1/2/3 capability curriculum: reading, outputs, practice audits, and templates over 12 weeks.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creator-brand-evidence.vercel.app/curriculum-dashboard">
+<meta property="og:site_name" content="Evidence·Studio">
+<meta property="og:image" content="https://creator-brand-evidence.vercel.app/assets/og/curriculum-dashboard.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Evidence·Studio card: the 12-week capability curriculum.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capability Dashboard — 12-Week Curriculum — Evidence·Studio">
+<meta name="twitter:description" content="An interactive Tier 1/2/3 capability curriculum: reading, outputs, practice audits, and templates over 12 weeks.">
+<meta name="twitter:image" content="https://creator-brand-evidence.vercel.app/assets/og/curriculum-dashboard.png">
+
 <meta name="description" content="An interactive Tier 1/2/3 capability curriculum: reading, outputs, practice audits, and templates over 12 weeks.">
 <link rel="stylesheet" href="assets/style.css">
 <style>
@@ -125,6 +143,6 @@ function bar(){
 function resetAll(){ if(confirm("Reset all progress?")){ state={}; save(); render(); } }
 render();
 </script>
-<div style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999"><button onclick="document.getElementById('ca-modal-es').style.display='flex'" style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;background:#B8842A;color:#fff;border:none;padding:.55rem 1.1rem;border-radius:2rem;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.35)">Contact the Architect</button></div><div id="ca-modal-es" role="dialog" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.8);align-items:center;justify-content:center"><div style="background:#fff;max-width:420px;width:90%;padding:2rem;border-radius:4px"><h2 style="margin:0 0 1rem">Contact the Architect</h2><input id="ca-name-es" placeholder="Name (optional)" style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/><input id="ca-email-es" type="email" placeholder="Email (required)" style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/><textarea id="ca-msg-es" rows="3" placeholder="Message" style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box;resize:vertical"></textarea><div style="display:flex;gap:.75rem;justify-content:flex-end"><button onclick="document.getElementById('ca-modal-es').style.display='none'" style="background:none;border:1px solid #ccc;padding:.5rem 1rem;cursor:pointer">Cancel</button><button onclick="(function(){var e=document.getElementById('ca-email-es').value;if(!e){alert('Email required');return;}fetch('https://rn-api-rn-collins.vercel.app/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('ca-name-es').value,email:e,message:document.getElementById('ca-msg-es').value,source:'contact-architect-creator-brand-evidence'})}).then(function(){document.getElementById('ca-modal-es').style.display='none';alert('Sent!');}).catch(function(){alert('Error.');})})();" style="background:#1B7A68;color:#fff;border:none;padding:.5rem 1rem;cursor:pointer">Send</button></div></div></div>
+<div style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999"><button onclick="document.getElementById('ca-modal-es').style.display='flex'" style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;background:#B8842A;color:#fff;border:none;padding:.55rem 1.1rem;border-radius:2rem;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.35)">Contact the Architect</button></div><div id="ca-modal-es" role="dialog" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.8);align-items:center;justify-content:center"><div style="background:#fff;max-width:420px;width:90%;padding:2rem;border-radius:4px"><h2 style="margin:0 0 1rem">Contact the Architect</h2><input aria-label="Your name (optional)" id="ca-name-es" placeholder="Name (optional)" style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/><input aria-label="Your email address (required)" id="ca-email-es" type="email" placeholder="Email (required)" style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/><textarea aria-label="Your message" id="ca-msg-es" rows="3" placeholder="Message" style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box;resize:vertical"></textarea><div style="display:flex;gap:.75rem;justify-content:flex-end"><button onclick="document.getElementById('ca-modal-es').style.display='none'" style="background:none;border:1px solid #ccc;padding:.5rem 1rem;cursor:pointer">Cancel</button><button onclick="(function(){var e=document.getElementById('ca-email-es').value;if(!e){alert('Email required');return;}fetch('https://rn-api-rn-collins.vercel.app/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('ca-name-es').value,email:e,message:document.getElementById('ca-msg-es').value,source:'contact-architect-creator-brand-evidence'})}).then(function(){document.getElementById('ca-modal-es').style.display='none';alert('Sent!');}).catch(function(){alert('Error.');})})();" style="background:#1B7A68;color:#fff;border:none;padding:.5rem 1rem;cursor:pointer">Send</button></div></div></div>
 </body>
 </html>
