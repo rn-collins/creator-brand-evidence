@@ -1,6 +1,7 @@
 // Shared: mobile nav toggle + inject nav/footer so pages stay consistent.
 (function(){
   var NAV = `
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="nav">
     <div class="nav-in">
       <a class="brand" href="index.html">Evidence<span>&middot;</span>Studio</a>
@@ -63,10 +64,13 @@
     var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
     var t=document.querySelector('.nav-toggle');
     if(t) t.addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('open');});
-    // mark active
+    // mark active. This used to set a.style.color directly, which painted the
+    // accent-green nav button's label in accent green on accent green — a 1:1
+    // ratio, i.e. invisible — on whichever page was current. aria-current also
+    // tells a screen reader what the colour was trying to say.
     var here=(location.pathname.split('/').pop()||'index.html');
     document.querySelectorAll('.nav-links a').forEach(function(a){
-      if(a.getAttribute('href')===here) a.style.color='var(--accent)';
+      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
     });
   }
   if(document.readyState!=='loading') mount();
