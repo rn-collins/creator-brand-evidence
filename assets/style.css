@@ -278,6 +278,7 @@ h3.sub{font-family:var(--sans);font-weight:700;font-size:.94rem;line-height:1.2;
 .phase h3.sub{margin:.4em 0 .3em}
 .vs h3.sub{margin-bottom:.6em}
 .footer h3.sub{color:#fff}
+.section-ink h3.sub{color:#fff}
 /* Promoted from <h3>: these are top-level sections sitting directly under the
    page h1, so the document was skipping from h1 to h3. h2 differs from h3 only
    in size and margin, so restoring both reproduces the previous rendering
