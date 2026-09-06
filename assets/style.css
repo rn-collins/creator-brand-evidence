@@ -269,3 +269,17 @@ main:focus{outline:none}
   .section-ink h1,.section-ink h2,.section-ink h3,.section-ink h4{color:#000}
   a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#444}
 }
+
+/* Promoted from <h4> so no page skips a heading level (h2 -> h4), which is what
+   a screen reader navigating by heading actually walks. The level changed; the
+   treatment deliberately did not, so these still read as the sans sub-labels
+   they were. Declared last so it wins the specificity tie with `.card h3`. */
+h3.sub{font-family:var(--sans);font-weight:700;font-size:.94rem;line-height:1.2;letter-spacing:.02em;color:var(--ink);margin:0 0 .35em}
+.phase h3.sub{margin:.4em 0 .3em}
+.vs h3.sub{margin-bottom:.6em}
+.footer h3.sub{color:#fff}
+/* Promoted from <h3>: these are top-level sections sitting directly under the
+   page h1, so the document was skipping from h1 to h3. h2 differs from h3 only
+   in size and margin, so restoring both reproduces the previous rendering
+   exactly. */
+h2.lvl3{font-size:1.28rem;margin:0 0 .35em}

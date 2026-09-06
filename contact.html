@@ -46,7 +46,7 @@
   <div class="wrap">
     <div class="grid g2" style="align-items:start">
       <form class="form" id="intake" onsubmit="return sendIntake(event)">
-        <h3>Basic information</h3>
+        <h2 class="lvl3">Basic information</h2>
         <div class="field"><label for="f-name">Name</label><input id="f-name" name="Name" required></div>
         <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="Email" required></div>
         <div class="field"><label for="f-company">Company / brand</label><input id="f-company" name="Company"></div>
@@ -54,18 +54,18 @@
         <div class="field"><label for="f-role">Role</label><input id="f-role" name="Role"></div>
         <div class="field"><label for="f-industry">Industry</label><input id="f-industry" name="Industry" placeholder="cannabis, wellness, legal, education, AI…"></div>
 
-        <h3 style="margin-top:.6em">Brand context</h3>
+        <h2 style="margin-top:.6em" class="lvl3">Brand context</h2>
         <div class="field"><label for="f-offer">What does your company sell or offer?</label><textarea id="f-offer" name="Offer"></textarea></div>
         <div class="field"><label for="f-audience">Who is your primary audience?</label><input id="f-audience" name="Audience"></div>
         <div class="field"><label for="f-regulated">Is your business regulated or trust-sensitive? Why is credibility important?</label><textarea id="f-regulated" name="Regulated"></textarea></div>
 
-        <h3 style="margin-top:.6em">Creator / content context</h3>
+        <h2 style="margin-top:.6em" class="lvl3">Creator / content context</h2>
         <div class="field"><label for="f-creatorcontext">Are you currently using creators, affiliates, ambassadors, UGC, or founder-led content?</label><textarea id="f-creatorcontext" name="CreatorContext"></textarea></div>
         <div class="field"><label for="f-platforms">Which platforms matter most right now?</label><input id="f-platforms" name="Platforms" placeholder="TikTok, IG, YouTube, LinkedIn, newsletter…"></div>
         <div class="field"><label for="f-ai">Are you using AI-assisted content tools?</label><input id="f-ai" name="AI"></div>
         <div class="field"><label for="f-assets">Do you have creator briefs, contracts, disclosure rules, or approval workflows?</label><input id="f-assets" name="Assets"></div>
 
-        <h3 style="margin-top:.6em">Main challenge</h3>
+        <h2 style="margin-top:.6em" class="lvl3">Main challenge</h2>
         <div class="field"><label>Which issues are you concerned about?</label>
           <div class="checks">
             <label><input type="checkbox" name="Concern" value="creator fit"> creator fit</label>
@@ -82,7 +82,7 @@
           </div>
         </div>
 
-        <h3 style="margin-top:.6em">Evidence &amp; materials you already have</h3>
+        <h2 style="margin-top:.6em" class="lvl3">Evidence &amp; materials you already have</h2>
         <div class="field"><div class="checks">
           <label><input type="checkbox" name="Evidence" value="campaign reports"> campaign reports</label>
           <label><input type="checkbox" name="Evidence" value="creator lists"> creator lists</label>
@@ -96,7 +96,7 @@
           <label><input type="checkbox" name="Evidence" value="legal/compliance docs"> legal/compliance docs</label>
         </div></div>
 
-        <h3 style="margin-top:.6em">Timeline &amp; budget</h3>
+        <h2 style="margin-top:.6em" class="lvl3">Timeline &amp; budget</h2>
         <div class="field"><label for="f-timeline">When do you need support?</label><input id="f-timeline" name="Timeline"></div>
         <div class="field"><label for="f-engagement">What are you looking for?</label><select id="f-engagement" name="Engagement">
             <option>Audit only</option><option>Strategy sprint</option><option>Governance system</option><option>Ongoing advisory</option><option>Not sure yet</option>
@@ -135,15 +135,15 @@
     </div>
     <div class="grid g3">
       <div class="card">
-        <h4>Useful to gather first</h4>
+        <h3 class="sub">Useful to gather first</h3>
         <p class="muted">A link to two or three recent creator posts, your current creator brief or contract template if one exists, and whatever measurement you have on the last campaign &mdash; even if it is a screenshot of platform analytics. Gaps in these are themselves a finding, so send what exists rather than waiting to assemble a complete set.</p>
       </div>
       <div class="card">
-        <h4>How your materials are handled</h4>
+        <h3 class="sub">How your materials are handled</h3>
         <p class="muted">Intake submissions and any materials shared during scoping are used to prepare your proposal and audit, and are shared with no one else. Named creators, contract terms and unpublished campaign results stay inside the engagement. If a finding is later written up as a case note, it is anonymised and cleared with you first.</p>
       </div>
       <div class="card">
-        <h4>Where this fits best</h4>
+        <h3 class="sub">Where this fits best</h3>
         <p class="muted">The audit does its clearest work for brands in trust-sensitive categories &mdash; health, legal, wellness, education and regulated consumer goods &mdash; that already have creator activity running and want the strategy underneath it made explicit before spend increases. Earlier-stage brands are usually better served by the Partnership Strategy Sprint.</p>
       </div>
     </div>
