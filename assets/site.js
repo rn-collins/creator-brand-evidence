@@ -56,7 +56,7 @@
         <span>Built by <a href="https://aloha-ai-consulting.vercel.app" target="_blank" rel="noopener">Aloha AI</a>. Explore all AI tools and projects at <a href="https://rn-portfolio-khaki.vercel.app" target="_blank" rel="noopener">RN Builds</a>.</span>
       </div>
     </div>
-  </footer>`;
+  <p><a href="https://github.com/rn-collins/creator-brand-evidence" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></p></footer>`;
 
   function mount(){
     var n=document.getElementById('nav'); if(n) n.innerHTML=NAV;
